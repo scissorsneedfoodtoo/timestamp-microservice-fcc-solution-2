@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 
 const cors = require('cors');
+const portNum = process.env.PORT || 3000;
 
 app.use(cors());
 
@@ -59,8 +60,8 @@ app.use(function(req, res, next) {
     .send('Not Found');
 });
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log(`Listening on port ${process.env.PORT}`);
+app.listen(portNum, function () {
+  console.log(`Listening on port ${portNum}`);
 });
 
 module.exports = app; // for testing
