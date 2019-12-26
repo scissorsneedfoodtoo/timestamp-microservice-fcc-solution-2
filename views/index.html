@@ -17,15 +17,21 @@
         <h2>APIs and Microservices 1: Timestamp Microservice</h2>
         <h3>User Stories:</h3>
         <ol class="user-stories"> 
-          <li>The API endpoint is <code>GET [project_url]/api/timestamp/:date_string?</code></li>
-          <li>A date string is valid if can be successfully parsed by <code>new Date(date_string)</code>.<br>
-          Note that the unix timestamp needs to be an <strong>integer</strong> (not a string) specifying <strong>milliseconds</strong>.<br> 
-          In our test we will use date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.</li>
-          <li>If the date string is <strong>empty</strong> it should be equivalent to trigger <code>new Date()</code>, i.e. the service uses the current timestamp.</li>
-          <li>If the date string is <strong>valid</strong> the api returns a JSON having the structure<br><code>{"unix": &lt;date.getTime()&gt;, "utc" : &lt;date.toUTCString()&gt; }</code><br>
-            e.g. <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
-          <li>If the date string is <strong>invalid</strong> the api returns a JSON having the structure <br>
-            <code>{"error" : "Invalid Date" }</code>.
+          <li>
+            The API endpoint is <code>GET [project_url]/api/timestamp/:date_string?</code>
+          </li>
+          <li>
+            A date string is valid if can be successfully parsed by <code>new Date(date_string)</code>. Note that the Unix timestamp needs to be an **integer** (not a string) specifying **milliseconds**.<br>
+            In our test we will use date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.
+          </li>
+          <li>
+            If the date string is **empty** it should be set to the equivalent of <code>new Date()</code> to get the current timestamp.
+          </li>
+          <li>
+            If the date string is **valid** the API should return a JSON response with the Unix timestamp and UTC string for that date. Example: <code>{"unix": <date.getTime()>, "utc" : <date.toUTCString()> }</code>
+          </li>
+          <li>
+            If the date string is invalid the API should return the following response: <code>{"error" : "Invalid Date" }</code>
           </li>
         </ol>
 
