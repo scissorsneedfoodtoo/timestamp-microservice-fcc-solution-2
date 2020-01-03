@@ -1,9 +1,8 @@
 /*
+*       
+*       To run the tests, open the terminal with [Ctrl + `] (backtick)
+*       and run the command `npm run test`
 *
-*
-*       FILL IN EACH FUNCTIONAL TEST BELOW COMPLETELY
-*       -----[Keep the tests in the same order!]-----
-*       (if additional are added, keep them at the very end!)
 */
 
 const chaiHttp = require('chai-http');

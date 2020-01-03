@@ -1,7 +1,7 @@
 {
-	"name": "timestamp",
-	"version": "0.0.1",
-	"description": "APIs and Microservices 1: Timestamp Microservice Solution",
+	"name": "timestamp-microservice",
+	"version": "1.0.0",
+	"description": "APIs and Microservices 1: Timestamp Microservice",
 	"main": "server.js",
 	"scripts": {
 		"start": "nodemon server.js",
@@ -10,15 +10,10 @@
 	"dependencies": {
 		"chai": "^4.2.0",
 		"chai-http": "^4.3.0",
-		"cors": "^2.8.1",
 		"dotenv": "^8.2.0",
-		"express": "^5.0.0-alpha.2",
+		"express": "^4.17.1",
 		"mocha": "^6.2.2",
 		"nodemon": "^2.0.2"
 	},
-	"keywords": [
-		"node",
-		"express"
-	],
 	"license": "MIT"
 }
